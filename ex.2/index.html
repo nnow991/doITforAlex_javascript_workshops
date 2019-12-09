@@ -20,6 +20,11 @@
         imiona.push(noweImie);
         document.getElementById("liczbaImion").innerText = imiona.length;
         document.getElementById("listaImion").innerText = imiona.join(", ");
+
+        //dodatkowo
+        const input = document.getElementById("noweImie");
+        input.value = "";
+        input.focus();
         
     }
 
