@@ -6,7 +6,7 @@
     <title>Warsztaty z JSa!</title>
 </head>
 
-<body id ="tlo">
+<body id="tlo">
     <div style="padding:10px; margin: 15px; border:1px solid grey; background-color:#ffffff">
         Tło:
         <input id="inputKolorTla" name="tlo" type="color" value="#ffffff" />
@@ -25,14 +25,27 @@
         ustawKolor(event.target.value, event.target.name)
     }
 
-    function ustawKolor(kolor,element){
-       document.getElementById(element).style.backgroundColor = kolor;
+    function ustawKolor(kolor, element) {
+        document.getElementById(element).style.backgroundColor = kolor;
+        document.getElementById("komunikat").innerText = pokazKomunikat(
+            kolor,
+            element
+        );
     }
+
+
+    function pokazKomunikat(kolor, idElementu) {
+        if (idElementu === undefined) {
+            return "Tło jest teraz koloru " + kolor;
+        }
+        return idElementu + " jest teraz koloru " + kolor;
+    }
+
     document.getElementById("inputKolorTla").onchange = zmianaKoloru;
     document.getElementById("inputKolorRzad1").onchange = zmianaKoloru;
     document.getElementById("inputKolorRzad2").onchange = zmianaKoloru;
 
-  
+
 </script>
 
 </html>
