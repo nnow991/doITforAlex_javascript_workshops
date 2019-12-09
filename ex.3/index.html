@@ -6,7 +6,7 @@
     <title>Warsztaty z JSa!</title>
 </head>
 
-<body>
+<body id ="tlo">
     <div style="padding:10px; margin: 15px; border:1px solid grey; background-color:#ffffff">
         Tło:
         <input id="inputKolorTla" name="tlo" type="color" value="#ffffff" />
@@ -22,14 +22,11 @@
 <script>
 
     function zmianaKoloru(event) {
-        console.log(event.target.value);
-        console.log(event.target.name);
         ustawKolor(event.target.value, event.target.name)
     }
 
     function ustawKolor(kolor,element){
-        console.log(kolor);
-        console.log(element);
+       document.getElementById(element).style.backgroundColor = kolor;
     }
     document.getElementById("inputKolorTla").onchange = zmianaKoloru;
     document.getElementById("inputKolorRzad1").onchange = zmianaKoloru;
