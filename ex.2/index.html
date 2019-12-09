@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>Warsztaty z JSa!</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <input type="text" id="noweImie" placeholder="Podaj nowe imię" />
     <button id="przyciskDodajImie">Dodaj imię</button>
     <div id="liczbaImion"></div>
     <div id="listaImion"></div>
-  </body>
-  <script>
-  let imiona =[];
+</body>
+<script>
+    let imiona = [];
 
-  function dodajImie(){
-      const noweImie = document.getElementById("noweImie").value;
-      imiona.push(noweImie);
-  }
+    function dodajImie() {
+        const noweImie = document.getElementById("noweImie").value;
+        imiona.push(noweImie);
+        document.getElementById("liczbaImion").innerText = imiona.length;
+        document.getElementById("listaImion").innerText = imiona.join(", ");
+        
+    }
 
-  document.getElementById("przyciskDodajImie").onclick= dodajImie;
-  </script>
+    document.getElementById("przyciskDodajImie").onclick = dodajImie;
+
+
+
+
+
+
+
+
+
+</script>
+
 </html>
