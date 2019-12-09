@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Warsztaty z JSa!</title>
-  </head>
-  <body>
-    <button id="przyciskPrzyjdz">Przyjdź</button>
-    <button id="przyciskOdejdz">Odejdź</button>
-    <button id="przyciskPowiedzCos">Powiedz coś</button>
-    <pre id="okno"></pre>
-  </body>
-  <script>
-    let wiadomosc = "Nie wiem, gdzie jesteś!";
 
-    function przyjdz() {
-      wiadomosc = "Witaj!";
-      document.getElementById("okno").innerText = wiadomosc;
+<head>
+  <meta charset="utf-8" />
+  <title>Warsztaty z JSa!</title>
+</head>
 
-    }
+<body>
+  <input type="text" id="inputZImieniem" placeholder="Podaj swoje imię" />
+  <button id="przyciskPrzyjdz">Przyjdź</button>
+  <button id="przyciskOdejdz">Odejdź</button>
+  <button id="przyciskPowiedzCos">Powiedz coś</button>
+  <pre id="okno"></pre>
+</body>
+<script>
+  let wiadomosc = "Nie wiem, gdzie jesteś!";
 
-    function odejdz() {
-      wiadomosc = "Szerokiej drogi!";
-      document.getElementById("okno").innerText = wiadomosc;
+  function przyjdz() {
+    let imie =     document.getElementById("inputZImieniem").value;
+    wiadomosc = "Witaj!" + imie +"!";
+    document.getElementById("okno").innerText = wiadomosc;
 
-    }
 
-    function powiedzCos() {
-        wiadomosc="Mówię coś!";
-      document.getElementById("okno").innerText = wiadomosc;
-    }
+  }
 
-    document.getElementById("przyciskPowiedzCos").onclick = powiedzCos;
-    document.getElementById("przyciskPrzyjdz").onclick = przyjdz;
-    document.getElementById("przyciskOdejdz").onclick = odejdz;
-  </script>
+  function odejdz() {
+    wiadomosc = "Szerokiej drogi!";
+    document.getElementById("okno").innerText = wiadomosc;
+
+  }
+
+  function powiedzCos() {
+    wiadomosc = "Mówię coś!";
+    document.getElementById("okno").innerText = wiadomosc;
+  }
+
+  document.getElementById("przyciskPowiedzCos").onclick = powiedzCos;
+  document.getElementById("przyciskPrzyjdz").onclick = przyjdz;
+  document.getElementById("przyciskOdejdz").onclick = odejdz;
+</script>
+
 </html>
