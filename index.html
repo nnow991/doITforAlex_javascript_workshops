@@ -17,15 +17,24 @@
   let wiadomosc = "Nie wiem, gdzie jesteś!";
 
   function przyjdz() {
-    let imie =     document.getElementById("inputZImieniem").value;
-    wiadomosc = "Witaj!" + imie +"!";
+    let imie = document.getElementById("inputZImieniem").value;
+    if (imie == '') {
+      wiadomosc = 'Musisz podać swoje imię!';
+    } else {
+      wiadomosc = "Witaj " + imie + "!";
+    }
     document.getElementById("okno").innerText = wiadomosc;
 
 
   }
 
   function odejdz() {
-    wiadomosc = "Szerokiej drogi!";
+let imie = document.getElementById("inputZImieniem").value;
+    if (imie == '') {
+      wiadomosc = 'Szerokiej drogi nieznajomy/a!';
+    } else {
+      wiadomosc = "Szerokiej drogi " + imie + "!";
+    }
     document.getElementById("okno").innerText = wiadomosc;
 
   }
