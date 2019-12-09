@@ -18,7 +18,7 @@
 
   function przyjdz() {
     let imie = document.getElementById("inputZImieniem").value;
-    if (imie == '') {
+    if (imie.trim() == '') {
       wiadomosc = 'Musisz podać swoje imię!';
     } else {
       wiadomosc = "Witaj " + imie + "!";
@@ -30,7 +30,7 @@
 
   function odejdz() {
 let imie = document.getElementById("inputZImieniem").value;
-    if (imie == '') {
+    if (imie.trim() == '') {
       wiadomosc = 'Szerokiej drogi nieznajomy/a!';
     } else {
       wiadomosc = "Szerokiej drogi " + imie + "!";
